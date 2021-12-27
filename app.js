@@ -29,9 +29,10 @@ function startPainting() {
 }
 
 function onMouseMove(e) {
+  // offset은 canvas안에 해당하는 영역을 표시해주는 값
   const x = e.offsetX;
   const y = e.offsetY;
-  // console.log(x, y);
+
   if(!painting) {
     ctx.beginPath(); // path is a line
     ctx.moveTo(x, y);
@@ -82,6 +83,7 @@ function handleSaveClick() {
   link.click();
 }
 
+// 확인 하기 위해서 if문을 사용
 if (canvas) {
   canvas.addEventListener('mousemove', onMouseMove);
   canvas.addEventListener('mousedown', startPainting);
