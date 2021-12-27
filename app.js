@@ -75,7 +75,11 @@ function handleCM(e) {
 }
 
 function handleSaveClick() {
-  const image = canvas.toDataURL('image/jpeg');
+  const image = canvas.toDataURL('image/gng');
+  const link = document.createElement('a');
+  link.href = image;
+  link.download = 'PantJS[🎨]';
+  link.click();
 }
 
 if (canvas) {
