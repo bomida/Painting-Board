@@ -94,8 +94,9 @@ body {
 }
 
 /* buttons arae */
-.controls .controls__btns {
+.controls__btns{
   display: flex;
+  flex-direction: column;
 }
 .controls__btns button{
   all: unset;
@@ -107,6 +108,9 @@ body {
   box-shadow: var(--neumorphisom-hover);
   background-color: var(--text-color);
   color: var(--bg-color);
+}
+.top__btns {
+  margin-bottom: 15px;
 }
 .controls__btns button:first-child{
   margin-right: 15px;
