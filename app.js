@@ -19,7 +19,6 @@ canvas.height = 600;
 ctx.fillStyle = '#f2f3f7'; // 기본 배경 색상
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ctx.strokeStyle = INITIAL_COLOR;
-ctx.fillStyle = INITIAL_COLOR;
 ctx.lineWidth = INITIAL_STROKE;
 
 let painting = false;
@@ -53,13 +52,12 @@ function onMouseMove(e) {
 function handleColorClick(e) {
   const color = e.target.style.backgroundColor;
   if(filling === true) {
-    const bg_color = color;
-    ctx.fillStyle = bg_color;
+    const bgColor = color;
+    ctx.fillStyle = bgColor;
   } else {
-    const painting_color = color;
-    ctx.strokeStyle = painting_color;
+    const paintingColor = color;
+    ctx.strokeStyle = paintingColor;
   }
-  console.log(ctx.fillStyle, ctx.strokeStyle);
 }
 
 function hadleRangeChange(e) {
@@ -95,15 +93,16 @@ function handleSaveClick() {
   link.click();
 }
 
-function handleEraserClick(){
+function handleEraserClick(e){
+  let x = e.offsetX;
+  let y = e.offsetY;
   ctx.strokeStyle = ctx.fillStyle;
-  ctx.strokeWidth = 10;
   if(!painting){
-      ctx.beginPath();
-      ctx.moveTo(x, y);
-  }else{
-      ctx.lineTo(x, y);
-      ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+  } else {
+    ctx.lineTo(x, y);
+    ctx.stroke();
   }
 }
 
