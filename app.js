@@ -3,12 +3,18 @@ const ctx = canvas.getContext('2d');
 const colors = document.getElementsByClassName('jsColor');
 const range = document.getElementById('jsRange');
 const mode = document.getElementById('jsMode');
+const saveBtn = document.getElementById('jsSave');
+
+const INITIAL_COLOR = '#2c2c2c';
 
 // canvas를 사용하기 위해서는 js에서도 width와 height를 지정해줘야한다.
 canvas.width = 500;
 canvas.height = 600;
 
-ctx.strokeStyle = '#2c2c2c'; // 선택 된 색상
+ctx.fillStyle = '#f2f3f7';
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+ctx.strokeStyle = INITIAL_COLOR; // 선택 된 색상
+ctx.fillStyle = INITIAL_COLOR;
 ctx.lineWidth = 2.5; // 선택 된 선 굴기
 
 let painting = false;
@@ -40,6 +46,7 @@ function onMouseMove(e) {
 function handleColorClick(e) {
   const color = e.target.style.backgroundColor;
   ctx.strokeStyle = color;
+  ctx.fillStyle = color;
 }
 
 function hadleRangeChange(e) {
@@ -53,8 +60,22 @@ function hadleModeClick(e) {
     mode.innerText = 'Fill'
   } else {
     filling = true;
-    mode.innerText = 'Paint'
+    mode.innerText = 'Paint';
   }
+}
+
+function hadleCanvasClick() {
+  if(filling) {
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
+}
+
+function handleCM(e) {
+  e.preventDefault();
+}
+
+function handleSaveClick() {
+  const image = canvas.toDataURL('image/jpeg');
 }
 
 if (canvas) {
@@ -62,6 +83,8 @@ if (canvas) {
   canvas.addEventListener('mousedown', startPainting);
   canvas.addEventListener('mouseup', stopPainting);
   canvas.addEventListener('mouseleave', stopPainting);
+  canvas.addEventListener('click', hadleCanvasClick);
+  canvas.addEventListener('contextmenu', handleCM);
 }
 
 if(colors) {
@@ -76,4 +99,8 @@ if(range) {
 
 if(mode) {
   mode.addEventListener('click', hadleModeClick);
+}
+
+if(saveBtn) {
+  saveBtn.addEventListener('click', handleSaveClick);
 }
