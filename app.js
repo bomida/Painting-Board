@@ -1,3 +1,4 @@
+// 상수 값 설정
 const canvas = document.getElementById('jsCanvas');
 const ctx = canvas.getContext('2d');
 const colors = document.getElementsByClassName('jsColor');
@@ -5,7 +6,9 @@ const range = document.getElementById('jsRange');
 const mode = document.getElementById('jsMode');
 const saveBtn = document.getElementById('jsSave');
 
-const INITIAL_COLOR = '#2c2c2c';
+// 공통 값
+const INITIAL_COLOR = '#2c2c2c'; // 기본 색상
+const INITIAL_STROKE = 2.5; // 기본 색상
 
 // canvas를 사용하기 위해서는 js에서도 width와 height를 지정해줘야한다.
 canvas.width = 500;
@@ -13,13 +16,14 @@ canvas.height = 600;
 
 ctx.fillStyle = '#f2f3f7';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
-ctx.strokeStyle = INITIAL_COLOR; // 선택 된 색상
+ctx.strokeStyle = INITIAL_COLOR;
 ctx.fillStyle = INITIAL_COLOR;
-ctx.lineWidth = 2.5; // 선택 된 선 굴기
+ctx.lineWidth = INITIAL_STROKE;
 
 let painting = false;
 let filling = false;
 
+// 함수 정의
 function stopPainting() {
   painting = false;
 }
