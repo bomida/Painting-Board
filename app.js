@@ -1,5 +1,6 @@
 const canvas = document.getElementById('jsCanvas');
 const ctx = canvas.getContext('2d');
+const colors = document.getElementsByClassName('jsColor');
 
 // canvas를 사용하기 위해서는 js에서도 width와 height를 지정해줘야한다.
 canvas.width = 500;
@@ -33,8 +34,9 @@ function onMouseMove(e) {
   }
 }
 
-function onMouseDown(e) {
-  painting = true;
+function handleColorClick(e) {
+  const color = e.target.style.backgroundColor;
+  ctx.strokeStyle = color;
 }
 
 if (canvas) {
@@ -43,3 +45,7 @@ if (canvas) {
   canvas.addEventListener('mouseup', stopPainting);
   canvas.addEventListener('mouseleave', stopPainting);
 }
+
+Array.from(colors).forEach(color => 
+  color.addEventListener('click', handleColorClick)
+);
