@@ -80,7 +80,6 @@ body {
   width: 85%;
   height: 12px;
   border-radius: 6px;
-  /* border: 1px solid var(--text-color); */
   box-shadow: var(--neumorphisom-range);
 	background: var(--bg-color);
 }
@@ -116,6 +115,8 @@ body {
   margin-right: 15px;
 }
 
+/* common circle area */
+
 .controls__colors .controls__color,
 .controls__btns button {
   width: 50px;
@@ -124,4 +125,72 @@ body {
   cursor: pointer;
   box-shadow: var(--neumorphisom);
   transition: var(--animation-duration);
+}
+
+
+
+/* media query area */
+@media screen and (max-width: 600px) {
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .canvas {
+    width: 330px;
+    height: 400px;
+  }
+
+  .controls {
+    /* flex-direction: row; */
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .controls .controls__colors {
+    display: block;
+  }
+  
+  .left__colors,
+  .right__colors {
+    display: flex;
+  }
+
+  .left__colors {
+    margin-right: 0px;
+  }
+  
+  .controls__colors .controls__color {
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  .controls__btns{
+    flex-direction: row;
+  }
+
+  .controls__btns button {
+    margin-right: 10px;
+  }
+  .controls__btns button:first-child{
+    margin-right: 10px;
+  }
+
+  .controls__colors .controls__color,
+  .controls__btns button {
+    width: 56px;
+    height: 30px;
+    border-radius: 15px;
+  }
+
+  .controls__range {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .controls__range input {
+    width: 100%;
+  }
+
 }
