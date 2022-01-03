@@ -8,6 +8,7 @@
   "short_name": "Paint Board",
   "start_url": "/index.html",
   "theme_color": "#ffffff",
+  "purpose": "any maskable",
   "icons": [
     {
       "src": "/icons/windows11/SmallTile.scale-100.png",
