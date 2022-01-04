@@ -3,7 +3,9 @@ var VERSION = 'version_01'              // Version of the off-line cache (change
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = [                            // Add URL you want to cache in this list.
   '/Painting-Board/',                     // If you have separate JS/CSS files,
-  '/Painting-Board/index.html'            // add path to those files here
+  '/Painting-Board/index.html',            // add path to those files here
+  '/Painting-Board/style.css',
+  '/Painting-Board/app.js'
 ]
 
 // Respond with cached resources
