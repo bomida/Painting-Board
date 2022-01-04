@@ -10,16 +10,23 @@
   <link rel="apple-touch-icon" href="icons/icon-512x512.png">
   <link rel="icon" type="image/x-icon" href="icons/icon-72x72.png">
 
-  <script type="module">
+  <!-- <script type="module">
     import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
     const el = document.createElement('pwa-update');
     document.body.appendChild(el);
-  </script>
-  <!-- <script>
-    if (navigator.serviceWorker) {
-      navigator.serviceWorker.register('Painting-Board/pwabuilder-sw.js', {scope: '/Painting-Board/'})
-    }
   </script> -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('Paint-Board/pwabuilder-sw.js', { scope: '/Paint-Board/'})
+        .then(function (registration) {
+            console.log("success load");
+            console.log(registration);
+        })
+        .catch(function (err) {
+            console.log(err);
+        });
+    }
+  </script>
 
   <title>Paint Board</title>
 </head>
