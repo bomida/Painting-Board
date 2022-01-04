@@ -9,14 +9,12 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="icons/icon-512x512.png">
   <link rel="icon" type="image/x-icon" href="icons/icon-72x72.png">
-  <link rel="canonical" href="https://bomida.github.io/Painting-Board/">
 
   <script type="module">
     import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
     const el = document.createElement('pwa-update');
     document.body.appendChild(el);
   </script>
-  <script src="app.js"></script>
   <!-- <script>
     if (navigator.serviceWorker) {
       navigator.serviceWorker.register('Painting-Board/pwabuilder-sw.js', {scope: '/Painting-Board/'})
@@ -94,5 +92,7 @@
       </div>
     </div> 
   </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
