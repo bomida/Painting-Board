@@ -4,15 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="icons/icon-512x512.png">
   <link rel="icon" type="image/x-icon" href="icons/icon-72x72.png">
-  <script type="module">
+  <link rel="canonical" href="https://bomida.github.io/Painting-Board/" />
+
+  <!-- <script type="module">
     import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
     const el = document.createElement('pwa-update');
     document.body.appendChild(el);
+  </script> -->
+  <script>
+    if(navigator.serviceWorker) {
+      navigator.serviceWorker.register('/Painting-Board/pwabuilder-sw.js', {scope: '/Painting-Board/'})
+    }
   </script>
+
   <title>Paint Board</title>
 </head>
 <body>
