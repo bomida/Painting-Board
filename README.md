@@ -18,6 +18,8 @@ HTML, CSS, Vanilla JS를 이용하여 그림판을 만들었습니다.
   - Progressive Web App 적용
   - 미디어쿼리 적용
 
+  <br>
+
   ## 구현 예정 기능
   - 그라데이션 컬러팔레트 추가 및 그리기
   - 모바일 터치 구현
