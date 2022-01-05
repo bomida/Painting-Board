@@ -39,6 +39,15 @@ HTML, CSS, Vanilla JS를 이용하여 그림판을 만들었습니다.
 
 <br>
 
+## 문제 사항
+  - 로컬 호스트에서 확인 시 PWA 적용사항이 확인 되지만<br>깃헙 페이지 링크로 확인 시 적용 사항이 보이지 않는다.
+
+  <img src="https://user-images.githubusercontent.com/93115007/148208379-9fc0bc37-ab3c-49b8-9962-95dde4fef4ac.png" width="600">
+
+  <img src="https://user-images.githubusercontent.com/93115007/148208080-a1613cb3-d056-4bec-bdd3-5d05d52ed01e.png" width="600">
+
+<br>
+
 ## 개발 환경
   - 개발도구: VSCode, Github
   - 사용언어: HTML, CSS, Vanilla JS
