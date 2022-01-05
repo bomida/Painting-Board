@@ -30,7 +30,7 @@ HTML, CSS, Vanilla JS를 이용하여 그림판을 만들었습니다.
   - html의 canvas 테그를 사용했습니다.
   - JS를 이용해 그림판을 구현했습니다.
   - 마우스 이벤트 메소드를 사용했습니다.<br>
-    (mousemove, mouseup, mousedown, mouseleave,click, contextmenu)
+    (mousemove, mouseup, mousedown, mouseleave, click, contextmenu)
   - mousemove시 offsetX, offsetY로 값을 구합니다.
   - canvas.getContext('2d')로 2d 픽셀 접근합니다.
   - beginPath(), moveTo(x, y)를 마우스가 클릭되지 않았을 때 호출합니다.
@@ -44,9 +44,9 @@ HTML, CSS, Vanilla JS를 이용하여 그림판을 만들었습니다.
 ## 문제 사항
   - 로컬 호스트에서 확인 시 PWA 적용사항이 확인 되지만<br>깃헙 페이지 링크로 확인 시 적용 사항이 보이지 않는다.
 
-  <img src="https://user-images.githubusercontent.com/93115007/148208379-9fc0bc37-ab3c-49b8-9962-95dde4fef4ac.png" width="600">
+  <img src="https://user-images.githubusercontent.com/93115007/148208379-9fc0bc37-ab3c-49b8-9962-95dde4fef4ac.png" alt="깃헙 페이지" width="600">
 
-  <img src="https://user-images.githubusercontent.com/93115007/148208080-a1613cb3-d056-4bec-bdd3-5d05d52ed01e.png" width="600">
+  <img src="https://user-images.githubusercontent.com/93115007/148208080-a1613cb3-d056-4bec-bdd3-5d05d52ed01e.png" alt="로컬 호스트" width="600">
 
 <br>
 
